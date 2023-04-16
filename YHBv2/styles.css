@@ -1,0 +1,101 @@
+/* Game container */
+#game {
+    width: 1080px;
+    height: 720px;
+    background-image: url("background.png");
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    transform: translate3d(0, 0, 0); 
+}
+
+/* Bird */
+#bird {
+    background-image: url("bird.png");
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 200px;
+    z-index: 5;
+}
+
+/* Pipe */
+.pipe {
+    position: absolute;
+    width: 52px;
+    background-repeat: no-repeat;
+    z-index: 3;
+}
+
+.pipe-top {
+    height: 320px;
+    background-image: url("pipe_top.png");
+    background-position: top;
+}
+
+.pipe-bottom {
+    height: 320px;
+    background-image: url("pipe_bottom.png");
+    background-position: bottom;
+}
+
+
+/* Ground and ceiling */
+.ground,
+.ceiling {
+    width: 1080px;
+    height: 50px;
+    background-image: url("ground.png"), url("ceiling.png");
+    background-repeat: repeat-x;
+    position: absolute;
+    z-index: 4;
+}
+
+.ceiling {
+    top: 0;
+}
+
+.ground {
+    bottom: 0;
+}
+
+/* Start screen and game over screen */
+#startScreen,
+#gameOverScreen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    width: 1080px;
+    height: 720px;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 6;
+}
+
+/* Button */
+button {
+    font-size: 24px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Score */
+#score {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    color: #FFF;
+    z-index: 7;
+}
+
+/* Start and game over screen titles */
+#startScreen h1,
+#gameOverScreen h1 {
+    color: white;
+    font-size: 48px;
+}
